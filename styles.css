@@ -37,7 +37,7 @@
 }
 
 /* The actual popup */
-.link-text .puzzle {
+.link-text .puzzle{
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -45,12 +45,15 @@
   text-align: center;
   border-radius: 6px;
   padding: 8px 0;
-  position: absolute;
+  position: relative;
   z-index: 1;
   bottom: 125%;
   left: 50%;
   margin-left: -80px;
 }
+
+
+
 
 
 /* Toggle this class - hide and show the popup */
