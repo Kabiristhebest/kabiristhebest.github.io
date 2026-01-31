@@ -2,21 +2,26 @@
 <html class="index">
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Gowun+Batang&display=swap" rel="stylesheet">
   </head>
 
   <body>
 
   <div class="directory">
     <div class="memoir-popup">
-      <div class="link-text" onclick="Function1()">kabirs m.emoi.r
+      <div class="link-text" onclick="memoir_function()">kabirs m.emoi.r ➡️
         <div class="puzzle" id="puzzle1">A Simple Popup!</div>
       </div>
 
       <script>
       // When the user clicks on div, open the popup
-      function Function1() {
-        var popup = document.getElementById("puzzle1");
-        popup.classList.toggle("show");
+      function memoir_function() {
+        var popup_puzzle = document.getElementById("puzzle1");
+        var popup_back = document.getElementById("backid");
+        popup_puzzle.classList.toggle("show");
+        popup_back.classList.toggle("show")
       }
       </script>
       
@@ -25,29 +30,28 @@
     </div>
 
     <div class="programs">
-      <div class="link-text" onclick="Function1()">kabirs m.emoi.r
+      <div class="link-text" onclick="programs_function()">kabirs pr.ograms ➡️
         <div class="puzzle" id="puzzle2">A simple popup</div>
       </div>
 
       <script>
       // When the user clicks on div, open the popup
-      function Function2() {
+      function programs_function() {
         var popup = document.getElementById("puzzle2");
         popup.classList.toggle("show");
       }
       </script>
 
     </div>
-
     <div class="links">
-      <div class="link-text" onclick="Function1()">kabirs m.emoi.r
-        <div class="puzzle" id="puzzle2">A Simple Popup!</div>
+      <div class="link-text" onclick="links_function()">kabirs linkaz.ia. ➡️
+        <div class="puzzle" id="puzzle3">A simple popup</div>
       </div>
 
       <script>
       // When the user clicks on div, open the popup
-      function Function2() {
-        var popup = document.getElementById("puzzle2");
+      function links_function() {
+        var popup = document.getElementById("puzzle3");
         popup.classList.toggle("show");
       }
       </script>
@@ -57,6 +61,16 @@
 
   </div>
   
+  <div class="back-button"onclick="back_function()">
+    <div class="back-popup" id="backid">⬅️back</div>
+    <script>
+      function back_function() {
+        var popup = document.getElementsByClassName("")
+        popup.classList.toggle("show")
+      }
+    </script>
+
+  </div>
       
 
 

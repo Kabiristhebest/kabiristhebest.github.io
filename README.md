@@ -11,3 +11,7 @@ My personal site.
 - [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - center content and create structure to the site
 
 -[popup](https://www.w3schools.com/howto/howto_js_popup.asp)-learning how to add popups
+
+https://www.w3schools.com/css/css_align.asp
+
+https://stackoverflow.com/questions/32092871/css-full-window-pop-up-box 

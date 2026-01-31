@@ -1,58 +1,61 @@
 .index{
-    font-family: serif;
+    font-family: "Gowun Batang";
     background: rgb(253, 254, 246);
     margin: 0;
-    background-color: #a4b6dd;
+    background-color: #d09292;
+    overflow:hidden;
 }
 
 .directory{
-    display: flex;
+    display:flex;
+    position:absolute;
     gap:300px;
-    justify-content: center;
+    inset: 0;
     align-items: center;
-    
+    justify-content: center;
 }
-
-
-
-
-
-
-
-
-
 
 
 
 
 /* Popup container*/
 .link-text {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    cursor: pointer;
 }
 
 /* The actual popup */
 .link-text .puzzle{
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: relative;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+        visibility: hidden;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 95vh;
+        margin: 0;
+}
+
+#puzzle1 {
+    background-color: #c094cc;
+}
+
+#puzzle2{
+    background-color: #a2d0c0;
+}
+
+#puzzle3{
+    background-color: #c37892;
 }
 
 
+/* back button starts hidden and shows when directory popup activated(learnt this by refrencing original popup*/
+.back-button .back-popup{
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 12px;
+    padding-left: 20px;
+
+}
 
 
 
@@ -63,6 +66,11 @@
   animation: fadeIn 1s;
 }
 
+.back-button .show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
@@ -72,4 +80,22 @@
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+
+
+
+
+
+
+
+
+
+/* For small screen sizes */
+@media (max-width: 1000px) {
+    .directory{
+        display:block;
+        padding-bottom: 30px;
+    }
+
 }
