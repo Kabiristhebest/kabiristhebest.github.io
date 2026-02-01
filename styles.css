@@ -4,6 +4,7 @@
     margin: 0;
     background-color: #d09292;
     overflow:hidden;
+    font-size: 100%;
 }
 
 .directory{
@@ -15,11 +16,47 @@
     justify-content: center;
 }
 
+.puzzle h1{
+    text-align: center;
+    justify-content: center;
+    padding-top:100px;
+}
+
+.clue{
+    align-items: center;
+    position:absolute;
+    width: 30%;
+    padding: 20px;
+    left: 33%;
+    text-align: center;
+}
+
+#clue1{
+    background-color: #a2d0c0;
+}
+
+#clue2{
+    background-color: #c094cc;
+}
+
+.puzzle img{
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+    max-height: 60%;
+    margin-top: 3%;
+}
+
+
 
 
 
 /* Popup container*/
 .link-text {
+    cursor: pointer;
+}
+
+.back-button{
     cursor: pointer;
 }
 
@@ -91,11 +128,28 @@
 
 
 
-/* For small screen sizes */
-@media (max-width: 1000px) {
+/* Responsive*/
+
+@media (max-width: 750px) {
     .directory{
-        display:block;
-        padding-bottom: 30px;
+        display: grid;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
     }
 
+    .quote1{
+        position: static;
+        width: 90%;
+        left: auto;
+        margin: 20px auto;
+        padding: 16px;
+        text-align: center;
+    }
+
+    .puzzle h1{
+        padding-top: 40px;
+        text-align: center;
+    }
 }

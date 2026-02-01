@@ -12,7 +12,13 @@
   <div class="directory">
     <div class="memoir-popup">
       <div class="link-text" onclick="memoir_function()">kabirs m.emoi.r ➡️
-        <div class="puzzle" id="puzzle1">A Simple Popup!</div>
+        <div class="puzzle" id="puzzle1">
+          <h1>mr jobs has something to say</h1>
+          <div class="clue" id="clue1">
+            you can't connect the dots looking forward; you can only connect them looking backward.
+          </div>
+        
+        </div>
       </div>
 
       <script>
@@ -20,8 +26,8 @@
       function memoir_function() {
         var popup_puzzle = document.getElementById("puzzle1");
         var popup_back = document.getElementById("backid");
-        popup_puzzle.classList.toggle("show");
-        popup_back.classList.toggle("show")
+        popup_puzzle.classList.add("show");
+        popup_back.classList.add("show")
       }
       </script>
       
@@ -31,28 +37,42 @@
 
     <div class="programs">
       <div class="link-text" onclick="programs_function()">kabirs pr.ograms ➡️
-        <div class="puzzle" id="puzzle2">A simple popup</div>
+        <div class="puzzle" id="puzzle2">
+          <h1>eyesight test....</h1>
+          <div class="clue" id="clue2">
+            people like COLOR’s that pop, especially FIRST hand perspectives,
+            which start with the LETTER ‘3’
+          </div>
+        </div>
       </div>
 
       <script>
       // When the user clicks on div, open the popup
       function programs_function() {
         var popup = document.getElementById("puzzle2");
-        popup.classList.toggle("show");
+        var popup_back = document.getElementById("backid");
+        popup.classList.add("show");
+        popup_back.classList.add("show")
       }
       </script>
 
     </div>
     <div class="links">
       <div class="link-text" onclick="links_function()">kabirs linkaz.ia. ➡️
-        <div class="puzzle" id="puzzle3">A simple popup</div>
+        <div class="puzzle" id="puzzle3">
+          <h1>connections happen everywhere</h1>
+          <img src="cube1.png">
+          </div>
+        </div>
       </div>
 
       <script>
       // When the user clicks on div, open the popup
       function links_function() {
         var popup = document.getElementById("puzzle3");
-        popup.classList.toggle("show");
+        var popup_back = document.getElementById("backid");
+        popup.classList.add("show");
+        popup_back.classList.add("show")
       }
       </script>
 
@@ -65,8 +85,14 @@
     <div class="back-popup" id="backid">⬅️back</div>
     <script>
       function back_function() {
-        var popup = document.getElementsByClassName("")
-        popup.classList.toggle("show")
+        var popup1 = document.getElementById("puzzle1");
+        var popup2 = document.getElementById("puzzle2");
+        var popup3 = document.getElementById("puzzle3");
+        var popup_back = document.getElementById("backid");
+        if (popup1) popup1.classList.remove("show");
+        if (popup2) popup2.classList.remove("show");
+        if (popup3) popup3.classList.remove("show");
+        if (popup_back) popup_back.classList.remove("show");
       }
     </script>
 
