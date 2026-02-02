@@ -19,3 +19,11 @@ https://stackoverflow.com/questions/32092871/css-full-window-pop-up-box
 https://www.w3schools.com/CSS/css_form.asp
 
 https://www.w3schools.com/js/js_events_keyboard.asp#:~:text=Note,Try%20it%20Yourself%20%C2%BB
+
+https://stackoverflow.com/questions/42816254/scroll-the-div-not-the-whole-page
+
+https://wolfie.dev/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-type
+
+https://www.w3schools.com/howto/howto_js_slideshow.asp

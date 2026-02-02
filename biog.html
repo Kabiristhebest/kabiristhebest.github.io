@@ -1,26 +1,128 @@
+<!-- THIS PAGE TAKES HEAVY INSPIRATION FROM WOLFIE.DEV -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-  </head>
 
-  <body id="biog">
-  <h2>me i guess</h2>
-  <div class="bio-flex">
-    <div class="scroll-menu">
+<head>
+    <link rel="stylesheet" href="biog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chokokutai&family=Gowun+Batang&display=swap" rel="stylesheet">
+</head>
 
+<body id="biog">
+    <h1>me i guess</h1>
+    <div class="bio-flex">
+
+        <div class="scroll-menu">
+            <a href="#p1">Topic 1</a>
+            <a href="#p2">Topic 2</a>
+            <a href="#p3">Topic 3</a>
+        </div>
+
+        <div class="paragraphs" id="scrollContainer">
+
+            <section class="panel" id="p1">
+                <h2>Topic 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam quam, cursus ultrices dolor nec,
+                    mattis porttitor enim. Vestibulum non mauris a felis auctor ultrices id nec arcu. Proin vitae
+                    iaculis tellus. Vivamus varius eros eros, et volutpat lacus commodo sit amet. Curabitur hendrerit
+                    euismod nibh id bibendum. Nulla venenatis nec magna eu elementum. Phasellus a dolor at mauris
+                    gravida aliquet. Nunc metus ante, egestas sed neque id, elementum auctor dui. Phasellus tempus dolor
+                    ac commodo tincidunt. In nunc mauris, mollis non vestibulum quis, tempus sit amet mauris. Aenean ut
+                    erat elit. Phasellus fermentum, nunc vel dignissim ullamcorper, mi magna fermentum lacus, et
+                    venenatis velit nunc eu nibh. Duis dolor quam, egestas in aliquet ac, consectetur sed ipsum.
+                    Pellentesque vitae ipsum non mi tempus elementum eget non massa. Vestibulum rutrum non erat et
+                    maximus. Sed eget nunc eros.</p>
+            </section>
+
+            <section class="panel" id="p2">
+                <h2>Topic 2</h2>
+                <p>Suspendisse ipsum neque, fringilla nec libero eu, vestibulum molestie elit. Cras orci felis,
+                    fermentum a eleifend quis, egestas et nisl. Duis porta molestie mollis. Etiam quis iaculis tortor.
+                    Duis a rhoncus turpis. Integer sagittis felis enim, at tristique felis condimentum vitae. Praesent
+                    sed placerat mauris. Phasellus vel elementum ex, eu mollis nunc. Donec nec nulla quis arcu sagittis
+                    sollicitudin a eu odio. Aenean vitae vestibulum libero.
+                    Sed interdum ante quis arcu fringilla sagittis. Phasellus fringilla cursus urna, quis malesuada
+                    lorem vulputate sit amet. Nullam pharetra tellus </p>
+            </section>
+
+            <section class="panel" id="p3">
+                <h2>Topic 3</h2>
+                <p>Sed interdum ante quis arcu fringilla sagittis. Phasellus fringilla cursus urna, quis malesuada lorem
+                    vulputate sit amet. Nullam pharetra tellus eu elit sollicitudin tempor. Morbi suscipit in lorem id
+                    hendrerit. Nulla et magna dignissim, sagittis massa et, convallis diam. Morbi sollicitudin lacinia
+                    erat, id laoreet metus. In posuere est ut semper imperdiet. Nunc mollis nisi at elit cursus
+                    dignissim. Nunc id nunc sagittis, tincidunt turpis non, pretium tellus. Proin sapien ante, posuere
+                    vitae fringilla a, molestie sit amet nunc. Aliquam erat volutpat. Integer aliquam ligula cursus
+                    dolor interdum hendrerit. Nullam quis ante vel arcu accumsan tincidunt. Orci varius natoque
+                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin et porta mauris. Nunc
+                    pretium ligula metus, pharetra mollis magna semper et.</p>
+            </section>
+
+        </div>
+        <div class="image-gallery">
+            <div class="slide fade">
+                <img src="jakob.jpg">
+            </div>
+        
+            <div class="slide fade">
+                <img src="cube1.png">
+            </div>
+        
+            <div class="slide fade">
+                <img src="image3.jpg">
+            </div>
+        
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        
+        </div>
+        </div>
+
+    <script>
+        const menuLinks = document.querySelectorAll(".scroll-menu a");
+
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+
+                menuLinks.forEach(l => l.classList.remove("active"));
+
+                link.classList.add("active");
+            });
+        });
+        let current = 0;
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("slide");
+
+            if (n >= slides.length) current = 0;
+            if (n < 0) current = slides.length - 1;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[current].style.display = "block";
+        }
+
+        function changeSlide(n) {
+            current += n;
+            showSlide(current);
+        }
+
+        // auto play
+        setInterval(() => {
+            current++;
+            showSlide(current);
+        }, 4000);
+
+        showSlide(current);
+    </script>
+
+    <div class="back-button">
+        <a href="index.html">⬅️back</a>
     </div>
-    <div class="paragraphs">
 
-    </div>
-    <div class="img-gallery">
+</body>
 
-    </div>
-  </div>
-
-  
-      
-
-
-  </body>
 </html>

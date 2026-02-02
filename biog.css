@@ -1,0 +1,151 @@
+body{
+    background-color: #a2d0c0;
+    font-family: "Gowun Batang";
+    color:black;
+    overflow: hidden;
+}
+
+h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #a2d0c0;
+
+    margin: 0;
+    padding: 15px 20px;
+
+    font-size: 35px;
+}
+
+.bio-flex {
+    display: flex;
+    height: 100vh;
+}
+
+.panel p,
+.paragraphs p {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 0 20px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.scroll-menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: fixed;
+    left: 2%;
+    top: 40%;
+    overflow: hidden;
+    padding: 20px;
+    
+}
+
+.scroll-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.scroll-menu a.active {
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.paragraphs {
+    flex: 1;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    margin:0 auto;
+}
+
+.panel {
+    margin-left:20%;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* for image gallery */
+
+.image-gallery {
+    width: 30%;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* navigation buttons */
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    background-color: #a2d0c0;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* fade animation */
+
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+
+
+
+.back-button a{
+    position:fixed;
+    bottom:1.5%;
+    left:1.5%;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    background: none;
+    border: none;
+    outline: none;
+}
