@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="index">
   <head>
+    <title>6777</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,13 +12,27 @@
 
   <div class="directory">
     <div class="memoir-popup">
-      <div class="link-text" onclick="memoir_function()">kabirs m.emoi.r ➡️
+      <div class="link-text" id="link-text1" onclick="memoir_function()">kabirs m.emoi.r ➡️
         <div class="puzzle" id="puzzle1">
           <h1>mr jobs has something to say</h1>
           <div class="clue" id="clue1">
             you can't connect the dots looking forward; you can only connect them looking backward.
+            
+            <form id="form1">
+              <label for="password">Enter Password:</label>
+              <input type="password" id="password1" required>
+            </form>
           </div>
-        
+          <script>
+            const passwordInput1 = document.getElementById('password1');
+            passwordInput1.addEventListener('input', function(event) {
+              const password = event.target.value;
+              if (password === "mirza") {
+                window.location.href = "biog.html";
+              }
+            });
+            
+          </script>
         </div>
       </div>
 
@@ -36,13 +51,29 @@
     </div>
 
     <div class="programs">
-      <div class="link-text" onclick="programs_function()">kabirs pr.ograms ➡️
+      <div class="link-text" id="link-text2" onclick="programs_function()">kabirs pr.ograms ➡️
         <div class="puzzle" id="puzzle2">
           <h1>eyesight test....</h1>
           <div class="clue" id="clue2">
             people like COLOR’s that pop, especially FIRST hand perspectives,
             which start with the LETTER ‘3’
+
+            <form id="form2">
+              <label for="password2">Enter Password:</label>
+              <input type="password" id="password2" required>
+            </form>
+            
           </div>
+          <script>
+            const passwordInput2 = document.getElementById('password2');
+            passwordInput2.addEventListener('input', function(event) {
+              const password = event.target.value;
+              if (password === "gyp") {
+                window.location.href = "proj_gal.html";
+              }
+            });
+            
+          </script>
         </div>
       </div>
 
@@ -58,13 +89,28 @@
 
     </div>
     <div class="links">
-      <div class="link-text" onclick="links_function()">kabirs linkaz.ia. ➡️
+      <div class="link-text" id="link-text3" onclick="links_function()">kabirs linkaz.ia. ➡️
         <div class="puzzle" id="puzzle3">
           <h1>connections happen everywhere</h1>
           <img src="cube1.png">
-          </div>
+          <form id="form3">
+              <label for="password3">Enter Password:</label>
+              <input type="password" id="password3" required>
+          </form>
+          
         </div>
+      <script>
+            const passwordInput = document.getElementById('password3');
+            passwordInput.addEventListener('input', function(event) {
+              const password = event.target.value;
+              if (password === "6777") {
+                window.location.href = "conn.html";
+              }
+            });
+            
+          </script>
       </div>
+    </div>
 
       <script>
       // When the user clicks on div, open the popup

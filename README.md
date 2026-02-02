@@ -15,3 +15,7 @@ My personal site.
 https://www.w3schools.com/css/css_align.asp
 
 https://stackoverflow.com/questions/32092871/css-full-window-pop-up-box 
+
+https://www.w3schools.com/CSS/css_form.asp
+
+https://www.w3schools.com/js/js_events_keyboard.asp#:~:text=Note,Try%20it%20Yourself%20%C2%BB
