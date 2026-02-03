@@ -1,0 +1,64 @@
+body{
+    background-color:  #046A38;
+    font-family: "Gowun Batang";
+    color:#582c83;
+    overflow: hidden;
+}
+
+h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:  #046A38;
+
+    margin: 0;
+    padding: 15px 20px;
+
+    font-size: 35px;
+}
+
+#conn {
+  margin: 0;
+  padding: 40px;
+}
+
+.conn-flex {
+  margin-top: 5%;
+  display: flex;
+  gap: 10ch;
+}
+
+.conn-box {
+  background-color: white;
+  width: 30%;
+  height: 60ch;
+  border: none;
+}
+
+.back-button a{
+    position:fixed;
+    bottom:1.5%;
+    left:1.5%;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 750px) {
+    html{
+      overflow:auto;
+    }
+    .conn-flex{
+      display:flex;
+      flex-direction: column;
+    }
+    .conn-box{
+      width:90vw;
+    }
+
+
+}

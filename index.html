@@ -106,6 +106,12 @@
               if (password === "6777") {
                 window.location.href = "conn.html";
               }
+              if(password !== "6777") {
+                form.classList.add("shake")
+              }
+              setTimeout(function() {
+                form.classList.remove("shake");
+              }, 500); // Matches 0.5s in CSS
             });
             
           </script>

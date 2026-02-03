@@ -27,3 +27,5 @@ https://wolfie.dev/
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-type
 
 https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+https://www.w3schools.com/html/html_iframe.asp
