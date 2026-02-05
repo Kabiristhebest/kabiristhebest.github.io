@@ -87,6 +87,14 @@ html {
 }
 
 @media (max-width: 750px) {
+    body {
+        overflow: auto;
+    }
+
+    .scroll-menu {
+        display: none;
+    }
+
     .scroll-menu{
         visibility: hidden;
     }
