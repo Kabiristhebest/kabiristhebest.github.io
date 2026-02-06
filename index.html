@@ -36,7 +36,6 @@
             passwordInput1.addEventListener('input', async function(event) {
               const password = event.target.value;
               const hashedInput = await hashPassword(password);
-              // Hash of "mirza"
               if (hashedInput === "419573d7148745facdb9f434151c16a7517525632e63081e78b431172f70369c") {
                 window.location.href = "biog.html";
               }
@@ -87,7 +86,6 @@
             passwordInput2.addEventListener('input', async function(event) {
               const password = event.target.value;
               const hashedInput = await hashPassword(password);
-              // Hash of "gyp"
               if (hashedInput === "267463e5e36cd78726a5d12054e2bcf9c297f74fb7f28d0dc8b524598297af6f") {
                 window.location.href = "proj_gal.html";
               }
@@ -132,7 +130,6 @@
             passwordInput.addEventListener('input', async function(event) {
               const password = event.target.value;
               const hashedInput = await hashPassword(password);
-              // Hash of "6777"
               const correctHash = "048f3a500f566c7c29cbfee2982f4b1252c4676f04dd8c6d36949251c54bf41d";
               if (hashedInput === correctHash) {
                 window.location.href = "conn.html";
