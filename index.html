@@ -24,10 +24,20 @@
             </form>
           </div>
           <script>
+            async function hashPassword(password) {
+              const encoder = new TextEncoder();
+              const data = encoder.encode(password);
+              const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+              const hashArray = Array.from(new Uint8Array(hashBuffer));
+              return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            }
+            
             const passwordInput1 = document.getElementById('password1');
-            passwordInput1.addEventListener('input', function(event) {
+            passwordInput1.addEventListener('input', async function(event) {
               const password = event.target.value;
-              if (password === "mirza") {
+              const hashedInput = await hashPassword(password);
+              // Hash of "mirza"
+              if (hashedInput === "419573d7148745facdb9f434151c16a7517525632e63081e78b431172f70369c") {
                 window.location.href = "biog.html";
               }
             });
@@ -65,10 +75,20 @@
             
           </div>
           <script>
+            async function hashPassword(password) {
+              const encoder = new TextEncoder();
+              const data = encoder.encode(password);
+              const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+              const hashArray = Array.from(new Uint8Array(hashBuffer));
+              return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            }
+            
             const passwordInput2 = document.getElementById('password2');
-            passwordInput2.addEventListener('input', function(event) {
+            passwordInput2.addEventListener('input', async function(event) {
               const password = event.target.value;
-              if (password === "gyp") {
+              const hashedInput = await hashPassword(password);
+              // Hash of "gyp"
+              if (hashedInput === "267463e5e36cd78726a5d12054e2bcf9c297f74fb7f28d0dc8b524598297af6f") {
                 window.location.href = "proj_gal.html";
               }
             });
@@ -100,16 +120,29 @@
           
         </div>
       <script>
+            async function hashPassword(password) {
+              const encoder = new TextEncoder();
+              const data = encoder.encode(password);
+              const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+              const hashArray = Array.from(new Uint8Array(hashBuffer));
+              return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            }
+            
             const passwordInput = document.getElementById('password3');
-            passwordInput.addEventListener('input', function(event) {
+            passwordInput.addEventListener('input', async function(event) {
               const password = event.target.value;
-              if (password === "6777") {
+              const hashedInput = await hashPassword(password);
+              // Hash of "6777"
+              const correctHash = "048f3a500f566c7c29cbfee2982f4b1252c4676f04dd8c6d36949251c54bf41d";
+              if (hashedInput === correctHash) {
                 window.location.href = "conn.html";
               }
-              if(password !== "6777") {
+              if(hashedInput !== correctHash) {
+                const form = document.getElementById('form3');
                 form.classList.add("shake")
               }
               setTimeout(function() {
+                const form = document.getElementById('form3');
                 form.classList.remove("shake");
               }, 500); // Matches 0.5s in CSS
             });
